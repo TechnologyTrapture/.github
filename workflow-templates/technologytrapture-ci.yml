@@ -2,16 +2,40 @@ name: TechnologyTrapture CI
 
 on:
   push:
-    branches: [ $default-branch ]
+    branches:
+      - $default-branch
   pull_request:
-    branches: [ $default-branch ]
+    branches:
+      - $default-branch
 
 jobs:
   build:
+    name: Build and Validate
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v6
+      - name: Checkout Repository
+        uses: actions/checkout@v6
 
-      - name: Run a one-line script
-        run: echo Hello from TechnologyTrapture Organization
+      - name: Display Workflow Information
+        run: |
+          echo "TechnologyTrapture CI Pipeline Started"
+          echo "Repository: ${{ github.repository }}"
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Triggered By: ${{ github.actor }}"
+
+      - name: Verify Environment
+        run: |
+          echo "Runner OS: $RUNNER_OS"
+          echo "Workflow: ${{ github.workflow }}"
+          echo "Event: ${{ github.event_name }}"
+
+      - name: Run Sample Validation
+        run: |
+          echo "Performing basic validation checks..."
+          echo "Validation Successful"
+
+      - name: Complete
+        run: |
+          echo "Hello from TechnologyTrapture Organization"
+          echo "CI Pipeline Completed Successfully"
