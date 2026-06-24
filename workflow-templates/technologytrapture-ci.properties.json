@@ -1,7 +1,7 @@
 {
     "name": "TechnologyTrapture Organization Workflow",
     "description": "TechnologyTrapture CI startter workflow.",
-    "iconName": "companyimage.png",
+    "iconName": "companyimage",
     "categories": [
         "Go"
     ],
