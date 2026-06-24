@@ -1,6 +1,6 @@
 {
     "name": "TechnologyTrapture Organization Workflow",
-    "description": "TechnologyTrapture Organization CI workflow template.",
+    "description": "TechnologyTrapture CI startter workflow.",
     "iconName": "companyimage.png",
     "categories": [
         "Go"
